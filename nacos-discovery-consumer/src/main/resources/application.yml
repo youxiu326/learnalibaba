@@ -1,6 +1,6 @@
 spring:
   application:
-    name: nacos-discovery-provider
+    name: nacos-discovery-consumer
   # 注册中心
   cloud:
     nacos:

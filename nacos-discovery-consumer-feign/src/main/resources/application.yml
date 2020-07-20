@@ -1,11 +1,14 @@
 spring:
   application:
-    name: nacos-discovery-provider
+    name: nacos-discovery-consumer-feign
   # 注册中心
   cloud:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-
+        # 元数据
+        metadata:
+          name: lengleng
 server:
-  port: 8050
+  port: 8052
+

@@ -11,6 +11,11 @@
 
   <name>learn-alibaba</name>
 
-
+  <modules>
+    <module>nacos-discovery-consumer</module>
+    <module>nacos-discovery-consumer-feign</module>
+    <module>nacos-discovery-consumer-webflux</module>
+    <module>nacos-discovery-provider</module>
+  </modules>
 
 </project>
