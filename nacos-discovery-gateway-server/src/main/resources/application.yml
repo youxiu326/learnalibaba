@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: nacos-discovery-gateway-server
+  # 注册中心
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  # gateway
+    gateway:
+      routes:
+        - id: nacos-discovery-provider
+          uri: lb://nacos-discovery-provider
+          predicates:
+            - Path=/provider/**
+          # 跳过第一个前缀[provider]
+          filters:
+            - StripPrefix=1
+
+server:
+  port: 8054
