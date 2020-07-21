@@ -19,6 +19,7 @@
     <module>nacos-discovery-gateway-server</module>
 
     <module>nacos-config-client</module>
+    <module>nacos-config-client-load</module>
 
   </modules>
 

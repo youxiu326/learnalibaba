@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: nacos-config-client-load
+  # 注册中心
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        group: ping
+  profiles:
+    active: dev
+
+
+server:
+  port: 8056
