@@ -21,6 +21,10 @@
     <module>nacos-config-client</module>
     <module>nacos-config-client-load</module>
 
+    <module>seata-biz-service</module>
+    <module>seata-order-service</module>
+    <module>seata-pay-service</module>
+
   </modules>
 
 </project>

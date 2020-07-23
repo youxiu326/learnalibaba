@@ -1,0 +1,34 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: biz-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/order?useSSL=false
+    username: root
+    password: zz123456.ZZ
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+seata:
+  enabled: true
+  application-id: biz-service #服务名
+  tx-service-group: my_test_tx_group # my_test_tx_group是自定义的事务分组名称
+  enable-auto-data-source-proxy: true # 启用自动数据源代理
+  config: # 配置中心为nacos模式
+    type: nacos
+    nacos:
+      namespace:
+      serverAddr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      userName: "nacos"
+      password: "nacos"
+  registry: # 注册中心为nacos模式
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 127.0.0.1:8848
+      namespace:
+      userName: "nacos"
+      password: "nacos"
